@@ -1,0 +1,42 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Mining 255</title>
+  <style>
+    /* CSS to control iframe layout */
+    .iframe-container {
+      margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+
+    /* Make iframes fill the entire screen height */
+    iframe {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <div class="iframe-container">
+    <iframe src="drop.html" width="100%"></iframe>
+  </div>
+  <!-- Use separate div containers for each iframe -->
+  <div class="iframe-container">
+    <iframe src="interactive_chart1.html" width="100%"></iframe>
+  </div>
+  
+  <div class="iframe-container">
+    <iframe src="scatter.html" width="100%"></iframe>
+  </div>
+  <h1>Matplotlib Plot</h1>
+    <img src="plot.png" alt="Matplotlib Plot">
+  <!-- Include the script tag to load your JavaScript file -->
+  <script src="index.js"></script>
+
+  <script type='module' src='https://us-west-2b.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script>
+  <tableau-viz id='tableau-viz' src='https://us-west-2b.online.tableau.com/t/c7/views/Book6/Sheet12/744c67bf-722a-48a1-b1a0-425995b8c9cb/f73a5805-d6df-4b2b-ac45-6e0e3f4de0bd' width='1440' height='775' hide-tabs toolbar='bottom' ></tableau-viz>
+
+</body>
+</html>
