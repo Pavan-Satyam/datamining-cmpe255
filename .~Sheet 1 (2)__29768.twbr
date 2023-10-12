@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0909.1159                               -->
+<workbook original-version='18.1' source-build='2023.2.2 (20232.23.0909.1159)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <SpatialFileLayer />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-on' />
+      <format attr='animation-style' value='as-synced' />
+      <format attr='animation-duration' value='0.30000001192092896' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='merged_file' inline='true' name='federated.06xvmw208md21w10uimir0a2cuug' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='merged_file' name='textscan.1w25fdy0l73g3t1fh9zq709ehadk'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='/Users/venkys/Downloads/C7_Input Files/dataset/merged_file.csv' dataRefreshTime='' directory='/Users/venkys/Downloads/C7_Input Files/dataset' filename='/var/folders/j_/9pk_v21x7rn6vpfxhg26v1t80000gn/T/tableau-temp/0y1fhnq0pbzlbk1bz9weg1szhu7j/merged_file.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='telangana_district_map' name='ogrdirect.0iyxr001mxvfxi10in0t60nbvalg'>
+            <connection class='ogrdirect' directory='/Users/venkys/Downloads/C7_Input Files' filename='telangana_district_map.json' password='' server='' tablename='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1w25fdy0l73g3t1fh9zq709ehadk' name='merged_file.csv' table='[/Users/venkys/Downloads/C7_Input Files/dataset/merged_file#csv]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:G1506:no:A1:G1506:2' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='dist_code' ordinal='0' />
+            <column datatype='date' name='month' ordinal='1' />
+            <column datatype='integer' name='documents_registered_cnt' ordinal='2' />
+            <column datatype='integer' name='documents_registered_rev' ordinal='3' />
+            <column datatype='integer' name='estamps_challans_cnt' ordinal='4' />
+            <column datatype='integer' name='estamps_challans_rev' ordinal='5' />
+            <column datatype='string' name='district' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1w25fdy0l73g3t1fh9zq709ehadk' name='merged_file.csv' table='[/Users/venkys/Downloads/C7_Input Files/dataset/merged_file#csv]' type='table'>
+            <columns character-set='UTF-8' gridOrigin='A1:G1506:no:A1:G1506:2' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='dist_code' ordinal='0' />
+              <column datatype='date' name='month' ordinal='1' />
+              <column datatype='integer' name='documents_registered_cnt' ordinal='2' />
+              <column datatype='integer' name='documents_registered_rev' ordinal='3' />
+              <column datatype='integer' name='estamps_challans_cnt' ordinal='4' />
+              <column datatype='integer' name='estamps_challans_rev' ordinal='5' />
+              <column datatype='string' name='district' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='ogrdirect.0iyxr001mxvfxi10in0t60nbvalg' name='telangana_district_map.topojson.json' table='[telangana_district_map.topojson.json]' type='table'>
+            <columns>
+              <column datatype='string' name='id' ordinal='0' />
+              <column datatype='integer' name='OBJECTID' ordinal='1' />
+              <column datatype='string' name='New_Distri' ordinal='2' />
+              <column datatype='real' name='Shape_Leng' ordinal='3' />
+              <column datatype='real' name='Shape_Area' ordinal='4' />
+              <column datatype='real' name='area' ordinal='5' />
+              <column datatype='string' name='Dist_Name' ordinal='6' />
+              <column datatype='spatial' name='Geometry' ordinal='7' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G1506:no:A1:G1506:2&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dist_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dist_code]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>dist_code</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>documents_registered_cnt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[documents_registered_cnt]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>documents_registered_cnt</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>documents_registered_rev</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[documents_registered_rev]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>documents_registered_rev</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estamps_challans_cnt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[estamps_challans_cnt]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>estamps_challans_cnt</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estamps_challans_rev</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[estamps_challans_rev]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>estamps_challans_rev</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>district</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[district]</local-name>
+            <parent-name>[merged_file.csv]</parent-name>
+            <remote-alias>district</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OBJECTID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OBJECTID]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>OBJECTID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New_Distri</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[New_Distri]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>New_Distri</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shape_Leng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shape_Leng]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>Shape_Leng</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shape_Area</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shape_Area]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>Shape_Area</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>area</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[area]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>area</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dist_Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Dist_Name]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>Dist_Name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[telangana_district_map.topojson.json]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Dist Name' datatype='string' name='[Dist_Name]' role='dimension' type='nominal' />
+      <column caption='New Distri' datatype='string' name='[New_Distri]' role='dimension' type='nominal' />
+      <column caption='Objectid' datatype='integer' name='[OBJECTID]' role='measure' type='quantitative' />
+      <column caption='Shape Area' datatype='real' name='[Shape_Area]' role='measure' type='quantitative' />
+      <column caption='Shape Leng' datatype='real' name='[Shape_Leng]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='merged_file.csv' datatype='table' name='[__tableau_internal_object_id__].[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='telangana_district_map.topojson.json' datatype='table' name='[__tableau_internal_object_id__].[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]' role='measure' type='quantitative' />
+      <column caption='Area' datatype='real' name='[area]' role='measure' type='quantitative' />
+      <column caption='Dist Code' datatype='string' name='[dist_code]' role='dimension' type='nominal' />
+      <column caption='District' datatype='string' name='[district]' role='dimension' type='nominal' />
+      <column caption='Documents Registered Cnt' datatype='integer' name='[documents_registered_cnt]' role='measure' type='quantitative' />
+      <column caption='Documents Registered Rev' datatype='integer' name='[documents_registered_rev]' role='measure' type='quantitative' />
+      <column caption='Estamps Challans Cnt' datatype='integer' name='[estamps_challans_cnt]' role='measure' type='quantitative' />
+      <column caption='Estamps Challans Rev' datatype='integer' name='[estamps_challans_rev]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='merged_file.csv' id='merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC'>
+            <properties context=''>
+              <relation connection='textscan.1w25fdy0l73g3t1fh9zq709ehadk' name='merged_file.csv' table='[/Users/venkys/Downloads/C7_Input Files/dataset/merged_file#csv]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:G1506:no:A1:G1506:2' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='dist_code' ordinal='0' />
+                  <column datatype='date' name='month' ordinal='1' />
+                  <column datatype='integer' name='documents_registered_cnt' ordinal='2' />
+                  <column datatype='integer' name='documents_registered_rev' ordinal='3' />
+                  <column datatype='integer' name='estamps_challans_cnt' ordinal='4' />
+                  <column datatype='integer' name='estamps_challans_rev' ordinal='5' />
+                  <column datatype='string' name='district' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='telangana_district_map.topojson.json' id='telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE'>
+            <properties context=''>
+              <relation connection='ogrdirect.0iyxr001mxvfxi10in0t60nbvalg' name='telangana_district_map.topojson.json' table='[telangana_district_map.topojson.json]' type='table'>
+                <columns>
+                  <column datatype='string' name='id' ordinal='0' />
+                  <column datatype='integer' name='OBJECTID' ordinal='1' />
+                  <column datatype='string' name='New_Distri' ordinal='2' />
+                  <column datatype='real' name='Shape_Leng' ordinal='3' />
+                  <column datatype='real' name='Shape_Area' ordinal='4' />
+                  <column datatype='real' name='area' ordinal='5' />
+                  <column datatype='string' name='Dist_Name' ordinal='6' />
+                  <column datatype='spatial' name='Geometry' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[district]' />
+              <expression op='[Dist_Name]' />
+            </expression>
+            <first-end-point object-id='merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC' />
+            <second-end-point object-id='telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_file' name='federated.06xvmw208md21w10uimir0a2cuug' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.06xvmw208md21w10uimir0a2cuug'>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column caption='Objectid' datatype='integer' name='[OBJECTID]' role='measure' type='quantitative' />
+            <column caption='Shape Area' datatype='real' name='[Shape_Area]' role='measure' type='quantitative' />
+            <column caption='Shape Leng' datatype='real' name='[Shape_Leng]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='merged_file.csv' datatype='integer' name='[__tableau_internal_object_id__].[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='telangana_district_map.topojson.json' datatype='integer' name='[__tableau_internal_object_id__].[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='merged_file.csv' datatype='table' name='[__tableau_internal_object_id__].[merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='telangana_district_map.topojson.json' datatype='table' name='[__tableau_internal_object_id__].[telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE]' role='measure' type='quantitative' />
+            <column caption='Area' datatype='real' name='[area]' role='measure' type='quantitative' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[documents_registered_rev]' derivation='Sum' name='[cum:sum:documents_registered_rev:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column caption='District' datatype='string' name='[district]' role='dimension' type='nominal' />
+            <column caption='Documents Registered Cnt' datatype='integer' name='[documents_registered_cnt]' role='measure' type='quantitative' />
+            <column caption='Documents Registered Rev' datatype='integer' name='[documents_registered_rev]' role='measure' type='quantitative' />
+            <column caption='Estamps Challans Cnt' datatype='integer' name='[estamps_challans_cnt]' role='measure' type='quantitative' />
+            <column caption='Estamps Challans Rev' datatype='integer' name='[estamps_challans_rev]' role='measure' type='quantitative' />
+            <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+            <column-instance column='[district]' derivation='None' name='[none:district:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OBJECTID]' derivation='Sum' name='[sum:OBJECTID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Shape_Area]' derivation='Sum' name='[sum:Shape_Area:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Shape_Leng]' derivation='Sum' name='[sum:Shape_Leng:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[area]' derivation='Sum' name='[sum:area:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[documents_registered_cnt]' derivation='Sum' name='[sum:documents_registered_cnt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[documents_registered_rev]' derivation='Sum' name='[sum:documents_registered_rev:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[estamps_challans_cnt]' derivation='Sum' name='[sum:estamps_challans_cnt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[estamps_challans_rev]' derivation='Sum' name='[sum:estamps_challans_rev:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[month]' derivation='Day-Trunc' name='[tdy:month:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.06xvmw208md21w10uimir0a2cuug].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:documents_registered_rev:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:area:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[__tableau_internal_object_id__].[cnt:merged_file.csv_2C87B7FF1E8F41A9AC9FDEE877D947EC:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[__tableau_internal_object_id__].[cnt:telangana_district_map.topojson.json_03D779EA75F748E4A1825A408C7619AE:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:documents_registered_cnt:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:estamps_challans_cnt:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:estamps_challans_rev:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:OBJECTID:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:Shape_Area:qk]&quot;</bucket>
+              <bucket>&quot;[federated.06xvmw208md21w10uimir0a2cuug].[sum:Shape_Leng:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.06xvmw208md21w10uimir0a2cuug].[Longitude (generated)]' field-type='quantitative' max='9256321.3771567345' min='8448212.6774714459' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.06xvmw208md21w10uimir0a2cuug].[Latitude (generated)]' field-type='quantitative' max='2277022.6401928933' min='1775839.8488251057' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.06xvmw208md21w10uimir0a2cuug].[sum:estamps_challans_rev:qk]' max='81336993463' min='145692452' num-steps='5' palette='tableau-map-blue-green' type='interpolated' />
+            <encoding attr='color' field='[federated.06xvmw208md21w10uimir0a2cuug].[sum:estamps_challans_cnt:qk]' palette='red_black_white_diverging_10_0' type='interpolated' />
+            <encoding attr='color' field='[federated.06xvmw208md21w10uimir0a2cuug].[sum:documents_registered_cnt:qk]' num-steps='255' symmetric='false' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#529985</color>
+                <color>#79a163</color>
+                <color>#dbcf47</color>
+                <color>#f4bc4e</color>
+                <color>#c26b51</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.06xvmw208md21w10uimir0a2cuug].[sum:documents_registered_rev:qk]' num-steps='255' palette='tableau-map-temperatur' reverse='true' symmetric='false' type='interpolated' />
+            <encoding attr='color' field='[federated.06xvmw208md21w10uimir0a2cuug].[cum:sum:documents_registered_rev:qk]' num-steps='255' palette='tableau-map-temperatur' reverse='true' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <_.fcp.MarkAnimation.true...style-rule element='animation'>
+            <format attr='animation-on' value='ao-on' />
+          </_.fcp.MarkAnimation.true...style-rule>
+        </style>
+        <panes>
+          <pane id='11' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.06xvmw208md21w10uimir0a2cuug].[none:district:nk]' />
+              <lod column='[federated.06xvmw208md21w10uimir0a2cuug].[clct:Geometry:nk]' />
+              <lod column='[federated.06xvmw208md21w10uimir0a2cuug].[:Measure Names]' />
+              <lod column='[federated.06xvmw208md21w10uimir0a2cuug].[:Measure Names]' />
+              <color column='[federated.06xvmw208md21w10uimir0a2cuug].[cum:sum:documents_registered_rev:qk]' />
+              <geometry column='[federated.06xvmw208md21w10uimir0a2cuug].[clct:Geometry:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06xvmw208md21w10uimir0a2cuug].[Latitude (generated)]</rows>
+        <cols>[federated.06xvmw208md21w10uimir0a2cuug].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.06xvmw208md21w10uimir0a2cuug].[tdy:month:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{AAACA4B0-FAE7-4D4D-A172-B8CACEC7B18F}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C65BA432-77BE-42F4-99D5-A5EEEFCF15B5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1 (2)' tab-color='#f66273'>
+      <cards>
+        <edge name='left'>
+          <strip size='216'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card pane-specification-id='11' param='[federated.06xvmw208md21w10uimir0a2cuug].[cum:sum:documents_registered_rev:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2019-04-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <default-map-tool-selection tool='16' />
+      </viewpoint>
+      <simple-id uuid='{6F3E9369-03A2-4CA8-9004-252B6F845B4F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FEC94BA5-3FAC-4FF7-9F19-69075E2B1A6A}' />
+    </window>
+  </windows>
+</workbook>
